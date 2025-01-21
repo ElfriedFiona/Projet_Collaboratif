@@ -1,0 +1,924 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "poppins", sans-serif;
+    
+}
+:root{
+    --bg-color:#FFF;
+    --second-bg-color: grey;
+    --text-color: black;
+    --main-color: rgb(206, 205, 205);
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    clear: both;
+    width: 100%;
+    height: 5vw;
+    padding-top: 2vw;
+}
+.logo{
+	font-size: 1.8rem;
+	color: var(--text-color);
+	font-weight: 500;
+	cursor: pointer;
+	transition: 0.3s ease;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+.logo:hover{
+	color: var(--text-color);
+	transform: 20rem 100rem;
+	box-shadow: 500px 500px 500px var(--main-color);
+	background: var(--main-color);}
+.navbar{
+    float: right;
+    margin-right: 15px;
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.1s ease;
+    
+    }
+    .navbar a:hover,
+    .navbar a.active{
+        color: var(--text-color);
+	transform: 20rem 100rem;
+	box-shadow: 500px 500px 500px var(--main-color);
+	background: var(--main-color);
+         }
+#menu-icon{
+        font-size: 3.6rem;
+        color: var(--main-color);
+        display: none;
+    }
+    #close{
+		display: none;
+		float: inline-end;
+		width: 30rem;
+        color: var(--main-color);
+	}
+    #HO{
+        display: none;
+    }
+    .home{
+        display : block;
+	align-items: center;
+        background: url("BG1.jpg") no-repeat center;
+        background-size: cover; 
+        height: 100vh;
+        overflow: hidden;
+        padding-left: 5rem;
+    }
+    .home-content h1{
+        padding-top: 27vh;
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: 5rem;  
+        color: rgb(255, 255, 255);
+        margin-top: 7rem;
+    }
+    .home-content p{
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        margin-bottom: 1.5rem;
+    }
+    .btn{
+        display: inline-block;
+        padding: 1rem 2.8rem;
+        background: var(--main-color);
+        font-size: 1.6rem;
+        color: black;
+          font-weight: 500;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+    .btn:hover{
+        transform: scale(1.05);
+          }
+    .btn-group{
+        align-items: center;
+        gap: 1.5rem;
+    }
+.about{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.about h1{
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 3rem;
+}
+.about h3{
+    margin-bottom: 3.5rem;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.about-content {
+    text-align: center;
+    margin-bottom: 7vw;
+}
+
+.about-content > * {
+    display: inline-block;
+    width: 23%; /* Utilise environ 23% pour chaque colonne afin de simuler 4 colonnes */
+    vertical-align: top;
+    margin-right: 2%; /* Espacement horizontal entre les colonnes */
+    margin-bottom: 2rem; /* Espacement vertical */
+}
+
+/* Dernier élément sans marge à droite pour alignement */
+.about-content > *:nth-child(4n) {
+    margin-right: 0;
+}
+.about-info h4{
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+.about-info p{
+    font-size: 1.4rem;
+	font-weight: 600;
+	line-height: 1.7;
+    text-align: center;
+}
+/*
+.section3{ 
+    color: var(--text-color);
+    background: var(--main-color);
+    padding-top: 4vw;
+    height: 90vh;
+}
+.btn2{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--text-color);
+    font-size: 1.6rem;
+    color: white;
+      font-weight: 500;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.btn2:hover{
+    transform: scale(1.05);
+      }
+.btn-group2{
+    align-items: center;
+    gap: 1.5rem;
+}
+.section3-container h2{
+    margin-top: 5rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+.section3-container p{
+    margin-top: 4rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+.section3-container .phone-img{
+    display: inline;
+    float: right;
+    height: 10rem;
+} */
+
+.section3 {
+    background: var(--main-color);
+    padding: 5rem;
+    overflow: hidden; /* Assure que les éléments flottants restent dans le conteneur */
+    height: 90vh;
+    align-items: center;
+}
+
+.section3-container {
+    float: left;
+    width: 50%; /* Prend 50% de la largeur pour la colonne de texte */
+    text-align: left;
+}
+.section3-container h2{
+    padding-top: 10rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.section3-container p{
+    padding-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.btn2{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--text-color);
+    font-size: 1.6rem;
+    color: white;
+      font-weight: 500;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+}
+.btn2:hover{
+    transform: scale(1.05);
+      }
+.btn-group2{
+    align-items: center;
+    gap: 1.5rem;
+}
+.phone-img {
+    float: right;
+    width: 50%; /* Prend 50% de la largeur pour l'image */
+    text-align: right; /* Aligne l'image vers la droite */
+    padding-top: 8rem;
+}
+
+.phone-img img {
+    width: 40vw; /* Définit la largeur de l'image */
+     /* Conserve le ratio de l'image */
+    display: inline-block; /* Empêche l'image de se recentrer */
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.team {
+    padding-left: 5rem;
+    padding-bottom: 15rem;
+    padding-top: 50rem;
+}
+
+.team h1 {
+    color: var(--text-color);
+}
+
+.team h3 {
+    color: var(--text-color);
+}
+
+.team-box {
+    
+    overflow: hidden; /* Gère le flot des éléments à l'intérieur */
+}
+
+.team-card {
+    height: 415px;
+    max-width: 580px;
+    background-color: white;
+    border: 1px solid var(--main-color);
+    display: inline-block; /* Pour que les cartes soient sur la même ligne */
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: black;
+    margin-right: 1.5rem; /* Espacement entre les cartes */
+    margin-bottom: 1rem; /* Espacement sous les cartes */
+    vertical-align: top; /* Assure que les cartes sont alignées sur le haut */
+    width: 23%; /* Cela permet d'avoir 4 colonnes (100% / 4 = 25%, avec un petit espace entre elles) */
+}
+
+.team-card h3 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.team-card h4 {
+    font-size: 2rem;
+    padding: 1rem;
+    padding-top: 0;
+    text-align: left;
+}
+
+.team-card p {
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    margin: 5rem;
+}
+
+.team-card img {
+    width: 300px;
+   height: 280;
+    object-fit: cover;
+}
+
+.percentage{
+    background: var(--second-bg-color);
+    height: 20vh;
+    align-items: center;
+    font-size: 2rem;
+    row-gap: 10rem;
+    margin-bottom: 7rem;
+    padding-left: 10rem;
+}
+.percentage-card >*{
+    display: inline-block;
+    width: 20%; /* Utilise environ 23% pour chaque colonne afin de simuler 4 colonnes */
+    vertical-align: top;
+    margin-right: 1%; /* Espacement horizontal entre les colonnes */
+    margin-bottom: 2rem;
+    margin-top: 3.5rem;
+}
+.percentage-card > *:nth-child(4n) {
+    margin-right: 0;
+}
+.percentage-card > *:nth-child(1n) {
+    margin-left: 3.5%;
+}
+.work {
+    padding-top: 10rem;
+    text-align: center;
+    padding-bottom: 15rem;
+}
+
+.work h1, h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.work  h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 6rem;
+}
+
+.work-card > * {
+    display: inline-block;
+    width: 22%; /* 4 colonnes, ajusté à 23% pour tenir dans la ligne */
+     margin-bottom: 1rem;/* Réduit l'espace entre les lignes */
+    margin-top: 0; /* Enlève l'espace supplémentaire en haut */
+     margin-right: 1rem;/* Ajoute un petit espace entre les colonnes */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur de l'élément */
+}
+
+.work-card > *:nth-child(4n) {
+    margin-right: 0; /* Aucun espace à droite de la dernière colonne */
+}
+
+.work-card2 > * {
+    display: inline-block;
+    width: 22%; /* 4 colonnes */
+    margin-bottom: 2rem; /* Réduit l'espace entre les lignes */
+    margin-right: 1rem;
+    /* Ajoute un petit espace entre les colonnes */
+    box-sizing: border-box; /* Assure que tout est bien inclus dans la largeur */
+}
+
+.work-card2 > *:nth-child(4n) {
+    margin-right: 0; /* Aucun espace à droite de la dernière colonne */
+}
+.work-card img {
+    width: 100%; /* Les images prennent toute la largeur de leur conteneur */
+    height: auto; /* Garde le ratio des images */
+    object-fit: cover; /* Ajuste les images pour remplir tout l'espace */
+    
+}
+
+.work-card2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+.skills{
+    padding-top: 1rem;
+    background: var(--main-color);
+    padding: 5rem;
+    overflow: hidden; /* Assure que les éléments flottants restent dans le conteneur */
+    height: 60vh;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+.skills-container{
+    float: left;
+    width: 35%; /* Prend 50% de la largeur pour la colonne de texte */
+    text-align: left;
+    margin-right: 15px;
+}
+.skills-container h2{
+    padding-top: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.skills-container p{
+    padding-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.skills-container2{
+    padding-top: 1rem;
+    float: right;
+    width: 50%; /* Prend 50% de la largeur pour l'image */
+    text-align: right; /* Aligne l'image vers la droite */
+    
+}
+ /* Augmenter la taille des titres des compétences */
+.skill-name {
+    font-size: 2rem; /* Augmente la taille de la police */
+    margin-bottom: 30px; /* Espacement entre le titre et la barre de progression */
+    text-align: LEFT;
+    padding-top: 2rem;
+    padding-left: 15px;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+progress[value] {
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    -webkit-appearance: none; /* Supprime le style par défaut */
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgb(156, 154, 154); /* Couleur de fond de la barre */
+    border-radius: 5px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: rgb(36, 36, 36); /* Couleur de progression en gris */
+    
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 20px; /* Assure le centrage vertical du texte dans la barre */
+    pointer-events: none;
+}
+.pricing{
+    height: 100vh;
+    background: var(--second-bg-color);
+}
+.pricing-section {
+    text-align: center;
+    padding-top: 10rem;
+    background-color: #666;
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 10rem ;
+}
+
+.pricing-section h1 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.pricing-cards {
+    display: table;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.card {
+    display: inline-block;
+    width: 250px;
+    margin: 0 10px;
+    vertical-align: top;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+.card-header.pro {
+    background-color: red;
+}
+
+.card-content {
+    padding: 20px;
+    color: #333;
+}
+
+.card-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.card-footer {
+    background-color: #eee;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contact{
+    background: var(--main-color);
+    height: 100vh;
+    padding-top: 10rem;
+    text-align: left;
+   margin-top: 7rem;
+   
+}
+.contact h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    
+}
+.contact h2{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+.contact .p1{
+    padding-left: 4rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+   
+}
+form .input-box{
+   margin-left: 3rem;
+	width: 50%;
+	font-size: 1.8rem;
+	resize: none;
+    height: 4rem;
+}
+
+.footer{
+    height: 40vh;
+    background: black;
+    text-align: center;
+    padding-top: 6rem;
+   
+}
+.footer p{
+    color: white;
+    padding-top: 2rem;
+    font-size: 15px;
+}
+@media(max-width:895px){
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 1);
+        clear: both;
+        width: 100%;
+        height: 8vw;
+        padding-top: 2vw;
+    }
+    .home{
+        display : block;
+	align-items: center;
+        background: url("BG1.jpg") no-repeat center;
+        background-size: cover; 
+        height: 80vh;
+        overflow: hidden;
+        padding-left: 2rem;
+    }
+    .home-content h1{
+        padding-top: 20vh;
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: 5rem;  
+        color: rgb(255, 255, 255);
+        margin-top: 7rem;
+    }
+    .home-content p{
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        margin-bottom: 1.5rem;
+    }
+	#menu-icon{
+		display: block;
+		float: inline-end;
+		width: 5rem;
+        height: 10rem;
+        color: var(--main-color);
+        padding-right: 0;
+	}
+    #close{
+		display: block;
+		float: left;
+		width: 100rem;
+        color: var(--main-color);
+	}
+    #HO{
+        display: block;
+    }
+	.navbar{
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 30%;
+		padding: 1rem 3%;
+		background: rgba(0,0,0,0.1);
+		backdrop-filter: blur(50px);
+		border-bottom-left-radius: 2rem;
+		border-left: 2px solid var(--main-color);
+		border-bottom: 2px solid var(--main-color);
+		display: none;
+	}
+	.navbar a{
+		display: block;
+		font-size: 2rem;
+		margin: 3rem 0;
+		color: white;
+	}
+	.section3 {
+        background: var(--main-color);
+        padding: 5rem;
+        overflow: hidden; /* Assure que les éléments flottants restent dans le conteneur */
+        height: 40%;
+        align-items: center;
+    }
+    .section3-container {
+        float: left;
+        width: 50%; /* Prend 50% de la largeur pour la colonne de texte */
+        text-align: left;
+    }
+    .section3-container h2{
+        padding-top: 6rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .section3-container p{
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+	.phone-img {
+        float: right;
+        width: 50%; /* Prend 50% de la largeur pour l'image */
+        text-align: right; /* Aligne l'image vers la droite */
+        padding-top: 4rem;
+    }
+    
+    .phone-img img {
+        width: 40vw; /* Définit la largeur de l'image */
+         /* Conserve le ratio de l'image */
+        display: inline-block; /* Empêche l'image de se recentrer */
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+    .team {
+        padding-left: 5rem;
+        padding-bottom: 15rem;
+        padding-top: 10rem;
+       text-align: center;
+    }
+    
+    .team h1 {
+        color: var(--text-color);
+        text-align: center;
+    }
+    
+    .team h3 {
+        color: var(--text-color);
+        text-align: center;
+    }
+    
+    .team-box {
+        align-items: center;
+        overflow: hidden; /* Gère le flot des éléments à l'intérieur */
+    }
+    
+    .team-card {
+        height: 410px;
+        max-width: 600px;
+        background-color: white;
+        border: 1px solid var(--main-color);
+        display: inline-block; /* Pour que les cartes soient sur la même ligne */
+        text-align: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.4s ease;
+        color: black;
+        margin-right: 2.5rem; /* Espacement entre les cartes */
+        margin-bottom: 1rem; /* Espacement sous les cartes */
+         /* Assure que les cartes sont alignées sur le haut */
+        width: 20%; /* Cela permet d'avoir 4 colonnes (100% / 4 = 25%, avec un petit espace entre elles) */
+    }
+    
+    .team-card h3 {
+        font-size: 2rem;
+        text-align: left;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+    
+    .team-card h4 {
+        font-size: 1rem;
+        padding: 1rem;
+        padding-top: 0;
+        text-align: left;
+    }
+    
+    .team-card p {
+        font-size: 1rem;
+        text-align: left;
+        padding: 1rem;
+    }
+    
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+        margin: 5rem;
+    }
+    
+    .team-card img {
+        width: 300px;
+       height: 280;
+        object-fit: cover;
+    }
+    .percentage{
+        background: var(--second-bg-color);
+        height: 17vh;
+        align-items: center;
+        font-size: 2rem;
+        margin-bottom: 7rem;
+        padding-left: 3rem;
+    }
+    .percentage-card >*{
+        display: inline-block;
+        width: 15%; /* Utilise environ 23% pour chaque colonne afin de simuler 4 colonnes */
+        vertical-align: top;
+        margin-right: 1%; /* Espacement horizontal entre les colonnes */
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    .percentage-card > *:nth-child(4n) {
+        margin-right: 0;
+    }
+    .percentage-card > *:nth-child(1n) {
+        margin-left: 5%;
+    }
+    .skills{
+        
+        background: var(--main-color);
+        padding: 5rem;
+        overflow: hidden; /* Assure que les éléments flottants restent dans le conteneur */
+        height: 50vh;
+        align-items: center;
+      
+    }
+    .skills-container{
+        float: left;
+        width: 35%; /* Prend 50% de la largeur pour la colonne de texte */
+        text-align: left;
+        margin-right: 10px;
+    }
+    .skills-container h2{
+        padding-top: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .skills-container p{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .skills-container2{
+        float: right;
+        width: 50%; /* Prend 50% de la largeur pour l'image */
+        text-align: right; /* Aligne l'image vers la droite */
+        
+    }
+     /* Augmenter la taille des titres des compétences */
+    .skill-name {
+        font-size: 2rem; /* Augmente la taille de la police */
+        margin-bottom: 20px; /* Espacement entre le titre et la barre de progression */
+        text-align: LEFT;
+        padding-top: 1rem;
+        padding-left: 12px;
+    }
+    .pricing{
+        height: 100vh;
+        background: var(--second-bg-color);
+    }
+    .pricing-section {
+        text-align: center;
+        padding-top: 10rem;
+        background-color: #666;
+        color: white;
+        font-size: 2rem;
+        padding-bottom: 10rem ;
+    }
+    
+    .pricing-section h1 {
+        margin: 0;
+        padding-bottom: 20px;
+    }
+    
+    .pricing-cards {
+        display: table;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+    
+    .card {
+        display: inline-block;
+        width: 200px;
+        margin: 0 10px;
+        vertical-align: top;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-header {
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        background-color: black;
+    }
+    
+    .card-header.pro {
+        background-color: red;
+    }
+    
+    .card-content {
+        padding: 20px;
+        color: #333;
+    }
+    
+    .card-content p {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    .card-footer {
+        background-color: #eee;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .contact{
+        background: var(--main-color);
+        height: 100vh;
+        padding-top: 10rem;
+        text-align: left;
+       margin-top: 7rem;
+       
+    }
+    .contact h1{
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        
+    }
+    .contact h2{
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        font-size: 1.5rem;
+    }
+    .contact .p1{
+        padding-left: 4rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+       
+    }
+}
